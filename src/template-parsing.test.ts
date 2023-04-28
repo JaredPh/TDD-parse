@@ -126,7 +126,7 @@ describe("Templates", () => {
       it("kitchen sink", () => {
         const expected = {
           unresolvedTemplate:
-            "Hello { FIRST_NAME | substring:0:3 | lowercase | maxLength:1 | uppercase  } { LAST_NAME }, today is { CURRENT_DATE | substring:0:5 }, and tomorrow is { CURRENT_DATE | addDays:1 | maxLength:5}, the year is {CURRENT_DATE | substring:6:10 | append:AD }!",
+            "Hello {     FIRST_NAME   |     substring :   0:3    | lowercase | maxLength:1 | uppercase  } { LAST_NAME }, today is { CURRENT_DATE | substring:0:5 }, and tomorrow is { CURRENT_DATE | addDays:1 | maxLength:5}, the year is {CURRENT_DATE | substring:6:10 | append:AD }!",
           resolvedTemplate:
             "Hello J Smith, today is 02/05, and tomorrow is 03/05, the year is 2023AD!",
           isValid: true,
